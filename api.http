@@ -1,0 +1,25 @@
+@base_url = http://localhost/api
+@token = replace_with_token_from_login
+
+### Register
+POST {{base_url}}/register
+Content-Type: application/json
+
+{
+    "name": "Test User",
+    "email": "test@example.com",
+    "password": "password123"
+}
+
+### Login
+POST {{base_url}}/login
+Content-Type: application/json
+
+{
+    "email": "test@example.com",
+    "password": "password123"
+}
+
+### Logout
+POST {{base_url}}/logout
+Authorization: Bearer {{token}}
