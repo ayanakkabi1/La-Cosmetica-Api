@@ -12,9 +12,9 @@ class Order extends Model
         'total_price'
     ];
     public function user(){
-        return $this->belongTo(User::class);
+        return $this->belongsTo(User::class);
     }
     public function items(){
-        return $this->hasmany(OrderItem::class);
+        return $this->hasMany(OrderItem::class);
     }
 }
